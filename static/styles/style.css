@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+body {
+   font-family: Karla;
+   background-color: #2d2c42;
+   color: white;
+}
+
+a {
+   color: #4492f2;
+}
+
+a:visited {
+   color: #b196e3;
+}
+
+img {
+   border-radius: 4%;
+}
