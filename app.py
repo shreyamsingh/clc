@@ -3,6 +3,11 @@ import requests
 
 app = Flask(__name__)
 
+# display plain text
+@app.route('/rawtext')
+def customHomepage():
+   return "Hello! This doesn't use HTML, but you can still see these words on the website!"
+
 # default homepage
 @app.route('/')
 def homepage():
@@ -15,8 +20,5 @@ def getDog():
    imgURL = response.json()['message']
    return render_template('dog.html', url=imgURL)
 
-# homepage if there's something after the / besides 'dog'
-@app.route('/<name>')
-def customHomepage(name):
-   return render_template('index.html', name=name.title())
+app.run()
    
